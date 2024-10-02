@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
-    
+    <style>
+      .fixed{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+    </style>
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 
+
 </head>
 <body>
-    <header class="bg-zinc-100">
-        <div class="p-11 navbar flex flex-col sm:flex-row gap-4">
+    <header>
+      <div class="fixed">
+        <div class="p-11 navbar flex flex-col sm:flex-row gap-4 bg-zinc-100">
             <div class="navbar-start border-solid">
                 <button class="btn bg-lime-500 text-black text-xl">Blog</button>
             </div>
@@ -26,16 +35,19 @@
              <div class="text-black text-3xl font-bold pl-2">5500BDT</div>
             </div>
           </div>
+           <!--button start-->
+       <div class="flex justify-center gap-4 mt-8">
+          <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-lime-500">Donation</button>
+          <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">History</button>
+       </div>
+       <!--button end-->
+      </div>
     </header>
-    <main class="lg:p-16">
-        <!--button start-->
-         <div class="flex justify-center gap-4">
-            <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-lime-500">Donation</button>
-            <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">History</button>
-         </div>
-         <!--button end-->
+
+
+  <main>
          <!-- card start -->
-         <div>     
+         <div  class="mt-64 lg:p-16">     
             <!-- first card start -->     
             <div class="card lg:card-side bg-base-100 shadow-xl">
                 <figure>
