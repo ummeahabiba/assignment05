@@ -4,13 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blog page</title>
+    <style>
+      .fixed{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+    </style>
     
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 <body>
-    <main>
+  <header>
+    <div class="fixed">
+      <div class="p-11 navbar flex flex-col sm:flex-row gap-4 bg-zinc-100">
+          <div class="navbar-start border-solid">
+              <button onclick="redirectToPageIndex()" class="btn bg-lime-500 text-black text-xl">Home</button>
+          </div>
+          
+          <div class="navbar-center">
+              <img src="assets/logo.png" alt="">
+              <h2 class="text-black text-2xl text-bold font-bold pl-4">Donate Bangladesh</h2>
+          </div>
+
+          <div class="navbar-end">
+           <img src="assets/coin.png" alt="">
+           <div class="text-black text-3xl font-bold pl-2">5500BDT</div>
+          </div>
+        </div>
+         <!--button start-->
+     <div class="flex justify-center gap-4 mt-8">
+        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-lime-500">Donation</button>
+        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">History</button>
+     </div>
+     <!--button end-->
+    </div>
+  </header>
+    <main class="mt-80">
+      <h1 class="font-extrabold text-4xl text-center mb-2">Important FAQ</h1>
         <div class="join join-vertical w-full">
             <div class="collapse collapse-arrow join-item border-base-300 border">
               <input type="radio" name="my-accordion-4" checked="checked" />
@@ -43,5 +77,9 @@
             </div>
           </div>
     </main>
+
+    <!--adding home page-->
+<script src="js/utilities.js"></script>
+<script src="js/features.js"></script>
 </body>
 </html>
