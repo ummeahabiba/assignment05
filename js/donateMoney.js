@@ -113,15 +113,18 @@ donationTab.addEventListener('click', function() {
 document.getElementById('history-btn')
         .addEventListener('click', function(){
           const donateMoneyNoakhali = getInputFieldValueById('input-money-noakhali');
-          const noakhaliTitle = getTextFieldValueById('title-noakhali');
+          const noakhaliTitle = getHistoryTextFieldValueById('title-noakhali');
           
           const donateMoneyFeni = getInputFieldValueById('input-money-feni');
-          const feniTitle = getTextFieldValueById('title-feni');
+          const feniTitle = getHistoryTextFieldValueById('title-feni');
           
           const donateMoneyProtest = getInputFieldValueById('input-money-protest');
-          const protestTitle = getTextFieldValueById('title-protest');
+          const protestTitle = getHistoryTextFieldValueById('title-protest');
          
 document.getElementById('show-history-section').classList.remove('hidden');
+document.getElementById('donation-btn').addEventListener('click', function(){
+  document.getElementById('show-history-section').classList.add('hidden');
+})
 
           const n = document.createElement('n');
           n.innerText = `${donateMoneyNoakhali} TK ${noakhaliTitle} at the time : ${new Date().toLocaleTimeString()} and Date : ${new Date().toLocaleDateString()}`;
@@ -134,4 +137,5 @@ document.getElementById('show-history-section').classList.remove('hidden');
           const p = document.createElement('p');
           p.innerText = `${donateMoneyProtest} TK ${protestTitle} at the time : ${new Date().toLocaleTimeString()} and Date : ${new Date().toLocaleDateString()}`;
           document.getElementById('history-container-protest').appendChild(p);
-        })
+        });
+

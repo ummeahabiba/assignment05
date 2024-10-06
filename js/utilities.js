@@ -19,8 +19,14 @@ function getInputFieldValueById(id){
     return inputNumber;
 }
 
-// for class
+// for text
 function getTextFieldValueById(id){
+    const textValue = document.getElementById(id).innerText;
+    const textNumber = parseFloat(textValue);
+    return textNumber;
+}
+//for history text
+function getHistoryTextFieldValueById(id){
     const textValue = document.getElementById(id).innerText;
     const textNumber = textValue;
     return textNumber;
