@@ -109,33 +109,76 @@ donationTab.addEventListener('click', function() {
   swapButtonColors(donationTab, historyTab);
 });
 
+// donation history 
+// document.getElementById('history-btn')
+//         .addEventListener('click', function(){
+//           const donateMoneyNoakhali = getInputFieldValueByClass('get-money-noakhali');
+//           const noakhaliTitle = getHistoryTextFieldValueByIdNoakhali('title-noakhali');
+          
+// document.getElementById('show-history-section').classList.remove('hidden');
+// document.getElementById('donation-btn').addEventListener('click', function(){
+// document.getElementById('show-history-section').classList.add('hidden');
+// })
 
-document.getElementById('history-btn')
-        .addEventListener('click', function(){
-          const donateMoneyNoakhali = getInputFieldValueById('input-money-noakhali');
-          const noakhaliTitle = getHistoryTextFieldValueById('title-noakhali');
-          
-          const donateMoneyFeni = getInputFieldValueById('input-money-feni');
-          const feniTitle = getHistoryTextFieldValueById('title-feni');
-          
-          const donateMoneyProtest = getInputFieldValueById('input-money-protest');
-          const protestTitle = getHistoryTextFieldValueById('title-protest');
+//           const n = document.createElement('n');
+//           n.innerText = `${donateMoneyNoakhali} TK ${noakhaliTitle} at the time : ${new Date().toLocaleTimeString()} and Date : ${new Date().toLocaleDateString()}`;
+//           document.getElementById('history-container-noakhali').appendChild(n);
+        
+//         });
+
+// document.getElementById('history-btn')
+//         .addEventListener('click', function(){
+//           const donateMoneyFeni = getInputFieldValueByClass('get-money-feni');
+//           const feniTitle = getHistoryTextFieldValueByIdFeni('title-feni');
          
-document.getElementById('show-history-section').classList.remove('hidden');
-document.getElementById('donation-btn').addEventListener('click', function(){
-  document.getElementById('show-history-section').classList.add('hidden');
-})
+// document.getElementById('show-history-section').classList.remove('hidden');
+// document.getElementById('donation-btn').addEventListener('click', function(){
+//   document.getElementById('show-history-section').classList.add('hidden');
+// })
 
-          const n = document.createElement('n');
-          n.innerText = `${donateMoneyNoakhali} TK ${noakhaliTitle} at the time : ${new Date().toLocaleTimeString()} and Date : ${new Date().toLocaleDateString()}`;
-          document.getElementById('history-container-noakhali').appendChild(n);
         
-          const f = document.createElement('f');
-          f.innerText = `${donateMoneyFeni} TK ${feniTitle} at the time : ${new Date().toLocaleTimeString()} and Date : ${new Date().toLocaleDateString()}`;
-          document.getElementById('history-container-feni').appendChild(f);
+//           const f = document.createElement('f');
+//           f.innerText = `${donateMoneyFeni} TK ${feniTitle} at the time : ${new Date().toLocaleTimeString()} and Date : ${new Date().toLocaleDateString()}`;
+//           document.getElementById('history-container-feni').appendChild(f);
         
-          const p = document.createElement('p');
-          p.innerText = `${donateMoneyProtest} TK ${protestTitle} at the time : ${new Date().toLocaleTimeString()} and Date : ${new Date().toLocaleDateString()}`;
-          document.getElementById('history-container-protest').appendChild(p);
-        });
+//         });
 
+// document.getElementById('history-btn')
+//         .addEventListener('click', function(){
+
+//           const donateMoneyProtest = getInputFieldValueByClass('get-money-protest');
+//           const protestTitle = getHistoryTextFieldValueByIdProtest('title-protest');
+         
+// document.getElementById('show-history-section').classList.remove('hidden');
+// document.getElementById('donation-btn').addEventListener('click', function(){
+//   document.getElementById('show-history-section').classList.add('hidden');
+// })
+//           const p = document.createElement('p');
+//           p.innerText = `${donateMoneyProtest} TK ${protestTitle} at the time : ${new Date().toLocaleTimeString()} and Date : ${new Date().toLocaleDateString()}`;
+//           document.getElementById('history-container-protest').appendChild(p);
+//         });
+
+document.getElementById('history-btn').addEventListener('click', function () {
+  // For Noakhali
+  const donateMoneyNoakhali = getInputFieldValueByClass('get-money-noakhali');
+  const noakhaliTitle = getHistoryTextFieldValueById('title-noakhali');
+  appendHistory('history-container-noakhali', donateMoneyNoakhali, noakhaliTitle);
+
+  // For Feni
+  const donateMoneyFeni = getInputFieldValueByClass('get-money-feni');
+  const feniTitle = getHistoryTextFieldValueById('title-feni');
+  appendHistory('history-container-feni', donateMoneyFeni, feniTitle);
+
+  // For Protest
+  const donateMoneyProtest = getInputFieldValueByClass('get-money-protest');
+  const protestTitle = getHistoryTextFieldValueById('title-protest');
+  appendHistory('history-container-protest', donateMoneyProtest, protestTitle);
+
+  // Show history section
+  document.getElementById('show-history-section').classList.remove('hidden');
+
+  // Add event listener to hide history section
+  document.getElementById('donation-btn').addEventListener('click', function () {
+      document.getElementById('show-history-section').classList.add('hidden');
+  });
+});

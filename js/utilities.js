@@ -26,10 +26,48 @@ function getTextFieldValueById(id){
     return textNumber;
 }
 //for history text
-function getHistoryTextFieldValueById(id){
+// for class
+// function getInputFieldValueByClass(className){
+//     const getValue = document.querySelector(className).value;
+//     const getNumber = parseFloat(getValue);
+//     return getNumber;
+// }
+// function getHistoryTextFieldValueByIdNoakhali(id){
+//     const textValue = document.getElementById(id).innerText;
+//     const textNumber = textValue;
+//     return textNumber;
+// }
+
+// function getHistoryTextFieldValueByIdFeni(id){
+//     const textValue = document.getElementById(id).innerText;
+//     const textNumber = textValue;
+//     return textNumber;
+// }
+
+// function getHistoryTextFieldValueByIdProtest(id){
+//     const textValue = document.getElementById(id).innerText;
+//     const textNumber = textValue;
+//     return textNumber;
+// }
+function getInputFieldValueByClass(className) {
+    const inputElement = document.querySelector(`.${className}`);
+    if (!inputElement) return 0;
+    const getValue = inputElement.value;
+    const getNumber = parseFloat(getValue);
+    return isNaN(getNumber) ? 0 : getNumber;
+}
+
+function getHistoryTextFieldValueById(id) {
     const textValue = document.getElementById(id).innerText;
-    const textNumber = textValue;
-    return textNumber;
+    return textValue;
+}
+function appendHistory(containerId, amount, title) {
+    const historyContainer = document.getElementById(containerId);
+    if (!historyContainer) return;
+    
+    const p = document.createElement('p');
+    p.innerText = `${amount} TK ${title} at the time: ${new Date().toLocaleTimeString()} and Date: ${new Date().toLocaleDateString()}`;
+    historyContainer.appendChild(p);
 }
 
 // button function
