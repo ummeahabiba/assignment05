@@ -22,6 +22,20 @@ function getInputFieldValueById(id){
 // for class
 function getTextFieldValueById(id){
     const textValue = document.getElementById(id).innerText;
-    const textNumber = parseFloat(textValue);
+    const textNumber = textValue;
     return textNumber;
 }
+
+// button function
+function swapButtonColors(button1, button2) {
+    if (button1.classList.contains('bg-slate-300')) {
+        button1.classList.replace('bg-slate-300', 'bg-lime-500');
+        button2.classList.replace('bg-lime-500', 'bg-slate-300');
+    } 
+    else {
+        button1.classList.replace('bg-lime-500', 'bg-slate-300');
+        button2.classList.replace('bg-slate-300', 'bg-lime-500');
+    }
+}
+
+

@@ -32,13 +32,13 @@
 
             <div class="navbar-end">
              <img src="assets/coin.png" alt="">
-             <div id="balance-amount" class="text-black text-3xl font-bold pl-2">5500BDT</div>
+             <div id="balance-amount" class="text-black text-3xl font-bold pl-2">5500 BDT</div>
             </div>
           </div>
            <!--button start-->
        <div class="flex justify-center gap-4 mt-8">
-          <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-lime-500">Donation</button>
-          <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">History</button>
+          <button id="donation-btn" class="rounded-full sm:btn-sm md:btn-md lg:btn-lg bg-lime-500">Donation</button>
+          <button id="history-btn" class="rounded-full sm:btn-sm md:btn-md lg:btn-lg bg-slate-300">History</button>
        </div>
        <!--button end-->
       </div>
@@ -47,7 +47,7 @@
 
   <main>
          <!-- card start -->
-         <div  class="mt-80 lg:p-16">     
+         <div id="show-card-section" class="mt-80 lg:p-16">     
             <!-- first card start -->     
             <div class="card lg:card-side bg-base-100 shadow-xl">
                 <figure>
@@ -58,9 +58,9 @@
                 <div class="card-body">
                     <div class="flex gap-2">
                         <img src="assets/coin.png" alt="">
-                        <h1 id="add-balance" class="font-bold text-xl">1000 BDT</h1>
+                        <h1 id="add-balance-noakhali" class="font-bold text-xl">1000 BDT</h1>
                     </div>
-                  <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+                  <h2 id="title-noakhali" class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
                   <p>According to the Flood Forecasting and Warning Center (FFWC) of the Bangladesh Water Development Board,
                      water levels in the Kushiyara, Manu, Dhalai, Khowai, Muhuri, Feni, and Halda rivers were above the danger level,
                       while the Muhuri River in Feni experienced its highest water levels in the past 40 years.</p>
@@ -85,17 +85,17 @@
                 <div class="card-body">
                     <div class="flex gap-2">
                         <img src="assets/coin.png" alt="">
-                        <h1 class="font-bold text-xl">0 BDT</h1>
+                        <h1 id="add-balance-feni" class="font-bold text-xl">200 BDT</h1>
                     </div>
-                  <h2 class="card-title">Donate for Flood at Feni, Bangladesh</h2>
+                  <h2 id="title-feni" class="card-title">Donate for Flood at Feni, Bangladesh</h2>
                   <p>According to the Flood Forecasting and Warning Center (FFWC) of the Bangladesh Water Development Board,
                      water levels in the Kushiyara, Manu, Dhalai, Khowai, Muhuri, Feni, and Halda rivers were above the danger level,
                       while the Muhuri River in Feni experienced its highest water levels in the past 40 years.</p>
                       <div class="form-control">
-                        <input type="text" placeholder="write Donation Amount" class="input input-bordered" required />
+                        <input id="input-money-feni" type="text" placeholder="write Donation Amount" class="input input-bordered" required />
                       </div>
                   <div class="card-actions">
-                    <button class="btn bg-lime-500 w-full">Donate Now</button>
+                    <button id="donate-btn-feni" class="btn bg-lime-500 w-full">Donate Now</button>
                   </div>
                 </div>
               </div>
@@ -112,28 +112,46 @@
                 <div class="card-body">
                     <div class="flex gap-2">
                         <img src="assets/coin.png" alt="">
-                        <h1 class="font-bold text-xl">0 BDT</h1>
+                        <h1 id="add-balance-protest" class="font-bold text-xl">2000 BDT</h1>
                     </div>
-                  <h2 class="card-title">Donate for Quota Protest, Bangladesh</h2>
+                  <h2 id="title-protest" class="card-title">Donate for Quota Protest, Bangladesh</h2>
                   <p>Please donate whatever you’re able towards relief to those who have been killed and those who are injured and those still supporting the movement.Police brutality continues, 
                     as protestors from universities such as East West, NSU, IUB and Northern have been viciously attcaked by tear gas, sound grenades and rubber bullets across Dhaka. 
                     </p>
                       <div class="form-control">
-                        <input type="text" placeholder="write Donation Amount" class="input input-bordered" required />
+                        <input id="input-money-protest" type="text" placeholder="write Donation Amount" class="input input-bordered" required />
                       </div>
                   <div class="card-actions">
-                    <button class="btn bg-lime-500 w-full">Donate Now</button>
+                    <button id="donate-btn-protest" class="btn bg-lime-500 w-full">Donate Now</button>
                   </div>
                 </div>
               </div>
             <!--Third card end-->
          </div>
          <!-- card end -->
+
+   <!--history section-->
+   <div id="show-history-section" class="hidden mb-8 text-center">
+      <h1 id="history-section" class="text-4xl font-bold text-gray-600">Donation History</h1>
+      <div id="history-container-noakhali">
+       
+      </div>
+      <br>
+      <div id="history-container-feni">
+       
+      </div>
+      <br>
+      <div id="history-container-protest">
+       
+      </div>
+   </div>
+
     </main>
    
     <script src="js/utilities.js"></script>
-     <script src="js/donateMoney.js"></script>
-    <script src="js/features.js"></script>
+    <script src="js/donateMoney.js"></script>
+    <script src="js/feature.js"></script>
+    
     
 </body>
 </html> 
