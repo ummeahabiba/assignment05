@@ -1,13 +1,13 @@
 // redirect to home page
 
 function redirectToPageIndex(){
-    window.location.href = '/index.html'; 
+    window.location.href = 'index.html'; 
 }
 
 // redirect to blog page
 
 function redirectToPageBlog(){
-    window.location.href = '/blog.html'; 
+    window.location.href = 'blog.html'; 
 }
 
 // common function 
@@ -25,30 +25,7 @@ function getTextFieldValueById(id){
     const textNumber = parseFloat(textValue);
     return textNumber;
 }
-//for history text
-// for class
-// function getInputFieldValueByClass(className){
-//     const getValue = document.querySelector(className).value;
-//     const getNumber = parseFloat(getValue);
-//     return getNumber;
-// }
-// function getHistoryTextFieldValueByIdNoakhali(id){
-//     const textValue = document.getElementById(id).innerText;
-//     const textNumber = textValue;
-//     return textNumber;
-// }
 
-// function getHistoryTextFieldValueByIdFeni(id){
-//     const textValue = document.getElementById(id).innerText;
-//     const textNumber = textValue;
-//     return textNumber;
-// }
-
-// function getHistoryTextFieldValueByIdProtest(id){
-//     const textValue = document.getElementById(id).innerText;
-//     const textNumber = textValue;
-//     return textNumber;
-// }
 function getInputFieldValueByClass(className) {
     const inputElement = document.querySelector(`.${className}`);
     if (!inputElement) return 0;
